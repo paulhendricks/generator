@@ -23,20 +23,123 @@ knitr::opts_chunk$set(
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-generator generates data containing fake Personally Identifiable Information (PII). generator generates the following types of PII:
+`generator` generates data containing fake Personally Identifiable Information (PII). `generator` generates the following types of PII:
 
 * Full name
-* Home address
-* E-mail
-* National identification number
-* Passport number
-* Social Security number
+* Home address (Needs updated.)
+* E-mail address
+* National identification number (Needs updated.)
+* Passport number (Needs updated.)
 * IP address
-* Vehicle registration plate number
-* Driver's license number
-* Credit card number
+* Vehicle registration plate number (Needs updated.)
+* Driver's license number (Needs updated.)
+* Credit card number (Needs updated.)
 * Date of birth
-* Birthplace
+* Birthplace (Needs updated.)
 * Telephone number
 * Latitude and longtiude
 
+## Installation
+
+You can install:
+
+* the latest released version from CRAN with
+
+    ```R
+    install.packages("generator")
+    ````
+
+* the latest development version from github with
+
+    ```R
+    if (packageVersion("devtools") < 1.6) {
+      install.packages("devtools")
+    }
+    devtools::install_github("paulhendricks/generator")
+    ```
+
+If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/generator/issues).
+
+## API
+
+### Full Name
+
+```{r}
+library(generator)
+r_full_names(5)
+```
+
+### Home address
+
+```{r}
+# To be added
+```
+
+### Email address
+
+```{r}
+r_email_addresses(5)
+```
+
+### National identification number
+
+```{r}
+r_national_identification_numbers(5)
+```
+
+### Passport number
+
+```{r}
+# To be added
+```
+
+### IP address
+
+```{r}
+r_ipv4_addresses(5)
+```
+
+### Vehicle registration plate number
+
+```{r}
+# To be added
+```
+
+### Driver's license number
+
+```{r}
+# To be added
+```
+
+### Credit card number
+
+```{r}
+# To be added
+```
+
+### Date of birth
+
+```{r}
+r_date_of_births(5)
+```
+
+### Birth place
+
+```{r}
+# To be added
+```
+
+### Telephone number
+
+```{r}
+r_phone_numbers(5)
+r_phone_numbers(5, use_hyphens = TRUE)
+r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
+r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
+```
+
+### Latitude and longitude
+
+```{r}
+paste0(r_latitudes(5), ", ", r_longitudes(5))
+```
