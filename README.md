@@ -2,7 +2,7 @@
 generator
 =========
 
-[![Build Status](https://travis-ci.org/paulhendricks/generator.png?branch=master)](https://travis-ci.org/paulhendricks/generator) [![Build status](https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/generator/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/generator/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/generator?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/generator)](http://cran.r-project.org/package=generator) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/paulhendricks/generator.png?branch=master)](https://travis-ci.org/paulhendricks/generator) [![Build status](https://ci.appveyor.com/api/projects/status/c5vv1efvrsynt4js/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/generator/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/generator/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/generator?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/generator)](http://cran.r-project.org/package=generator) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 `generator` generates data containing fake Personally Identifiable Information (PII). `generator` generates the following types of PII:
 
@@ -50,8 +50,8 @@ API
 ``` r
 library(generator)
 r_full_names(5)
-#> [1] "Kurtis Johns"    "Mikel Roob"      "Lauren McKenzie" "Damon Hirthe"   
-#> [5] "Clotilde Cremin"
+#> [1] "Cathryn Dooley"   "Fernando Goldner" "Ignacio Strosin" 
+#> [4] "Phylis Schulist"  "Kasandra Bailey"
 ```
 
 ### Home address
@@ -64,15 +64,16 @@ r_full_names(5)
 
 ``` r
 r_email_addresses(5)
-#> [1] "ocvpgitry@fjpwso.tma"  "d@asrlwqehzu.lzr"      "tpyrvlf@hkitb.hmw"    
-#> [4] "vcoeln@fevcmwjqgt.efk" "wkjtdcgr@khx.txl"
+#> [1] "rk@okex.ehd"             "rhsgtbqoxu@mnefyzwu.wyd"
+#> [3] "aci@ewxtsznhr.snu"       "fsjwcabzn@l.yji"        
+#> [5] "ypsmvblxnh@yecom.fuo"
 ```
 
 ### National identification number
 
 ``` r
 r_national_identification_numbers(5)
-#> [1] "439-13-7721" "629-81-9591" "137-14-5223" "313-21-5771" "369-13-1661"
+#> [1] "816-45-7163" "491-57-1514" "291-42-9965" "835-51-6966" "598-39-5753"
 ```
 
 ### Passport number
@@ -85,8 +86,8 @@ r_national_identification_numbers(5)
 
 ``` r
 r_ipv4_addresses(5)
-#> [1] "177.63.47.244"  "153.99.27.10"   "181.26.219.128" "36.183.103.118"
-#> [5] "57.185.242.209"
+#> [1] "78.21.236.183"  "102.255.235.58" "69.155.65.200"  "90.161.246.156"
+#> [5] "54.203.45.217"
 ```
 
 ### Vehicle registration plate number
@@ -111,7 +112,7 @@ r_ipv4_addresses(5)
 
 ``` r
 r_date_of_births(5)
-#> [1] "2009-10-06" "1921-06-05" "2003-12-25" "1957-10-16" "1988-08-11"
+#> [1] "1945-09-27" "1940-01-11" "1950-04-29" "1999-02-23" "2009-03-28"
 ```
 
 ### Birth place
@@ -124,25 +125,25 @@ r_date_of_births(5)
 
 ``` r
 r_phone_numbers(5)
-#> [1] "6439714527" "2164128236" "6186593458" "1437868514" "2638544563"
+#> [1] "3857314572" "2645289268" "4199614173" "3679435248" "5842612461"
 r_phone_numbers(5, use_hyphens = TRUE)
-#> [1] "981-234-8254" "748-792-6734" "248-938-2895" "216-198-9876"
-#> [5] "823-692-1563"
+#> [1] "456-379-3152" "825-827-1458" "259-814-6839" "791-154-7269"
+#> [5] "942-187-8362"
 r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
-#> [1] "(319)-925-9548" "(891)-319-3219" "(751)-827-4863" "(319)-683-5214"
-#> [5] "(918)-581-6124"
+#> [1] "(782)-968-7864" "(764)-693-9271" "(315)-912-8754" "(418)-543-1482"
+#> [5] "(374)-378-7359"
 r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
-#> [1] "(385) 397 8713" "(846) 895 8125" "(682) 329 1643" "(952) 731 2563"
-#> [5] "(956) 235 8396"
+#> [1] "(863) 714 7968" "(739) 246 2863" "(346) 412 3954" "(613) 165 3681"
+#> [5] "(892) 439 6291"
 ```
 
 ### Latitude and longitude
 
 ``` r
 paste0(r_latitudes(5), ", ", r_longitudes(5))
-#> [1] "68.9036622969434, 10.3894396405667" 
-#> [2] "-24.2443475173786, 6.03511805646122"
-#> [3] "55.6600663578138, 103.356743752956" 
-#> [4] "53.1906707631424, 175.915418704972" 
-#> [5] "18.408433184959, -77.8222204651684"
+#> [1] "30.967291588895, -60.18704588525"    
+#> [2] "-68.394632586278, 99.9230114556849"  
+#> [3] "-51.4533861726522, 57.0558929163963" 
+#> [4] "-29.4996267557144, -99.7885533235967"
+#> [5] "33.2272005826235, -51.9422342721373"
 ```
