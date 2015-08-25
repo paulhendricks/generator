@@ -4,5 +4,5 @@
 #' @return A character vector of \code{n} randomly generated latitude values.
 #' @export
 r_latitudes <- function(n) {
-  runif(n, -90, 90)
+  stats::runif(n, -90, 90)
 }
