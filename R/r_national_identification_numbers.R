@@ -4,13 +4,10 @@
 #' @return A character vector of \code{n} randomly generated national identification numbers.
 #' @export
 r_national_identification_numbers <- function(n) {
-  return(paste0(sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE), "-",
-                sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE), "-",
-                sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE),
-                sample(1:9, size = n, replace = TRUE), sep = ""))
+  return(paste(sample(100:999, size = n, replace = TRUE),
+               sample(10:99, size = n, replace = TRUE),
+               sample(1000:9999, size = n, replace = TRUE), sep = "-"))
   }
+
+#' @export
+r_social_security_numbers <- r_national_identification_numbers
