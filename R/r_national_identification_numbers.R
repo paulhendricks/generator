@@ -8,6 +8,3 @@ r_national_identification_numbers <- function(n) {
                sample(10:99, size = n, replace = TRUE),
                sample(1000:9999, size = n, replace = TRUE), sep = "-"))
   }
-
-#' @export
-r_social_security_numbers <- r_national_identification_numbers
