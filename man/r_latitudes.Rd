@@ -15,4 +15,7 @@ A character vector of \code{n} randomly generated latitude values.
 \description{
 Generate random fake latitude values.
 }
+\examples{
+r_latitudes(10)
+}
 

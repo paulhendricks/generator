@@ -15,4 +15,7 @@ A character vector of \code{n} randomly generated national identification number
 \description{
 Generate random fake national identification numbers.
 }
+\examples{
+r_national_identification_numbers(10)
+}
 

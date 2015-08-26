@@ -5,6 +5,13 @@
 #' @param use_parentheses should parantheses be included.
 #' @param use_spaces should spaces be included.
 #' @return A character vector of \code{n} randomly generated phone numbers.
+#' @examples
+#' r_phone_numbers(10)
+#' r_phone_numbers(10, use_hyphens = TRUE)
+#' r_phone_numbers(10, use_parentheses = TRUE)
+#' r_phone_numbers(10, use_spaces = TRUE)
+#' r_phone_numbers(10, use_parentheses = TRUE, use_hyphens = TRUE)
+#' r_phone_numbers(10, use_parentheses = TRUE, use_spaces = TRUE)
 #' @export
 r_phone_numbers <- function(n, use_hyphens = FALSE, use_parentheses = FALSE, use_spaces = FALSE) {
   left_paren <- ""

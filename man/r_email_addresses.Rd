@@ -15,4 +15,7 @@ A character vector of \code{n} fake randomly generated e-mail addresses.
 \description{
 Generate random fake e-mail addresses.
 }
+\examples{
+r_email_addresses(10)
+}
 

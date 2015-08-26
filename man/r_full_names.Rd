@@ -15,4 +15,7 @@ A character vector of \code{n} fake randomly generated full names.
 \description{
 Generate random fake full names.
 }
+\examples{
+r_full_names(10)
+}
 

@@ -15,4 +15,7 @@ A character vector of \code{n} randomly generated credit card numbers.
 \description{
 Generate random fake credit card numbers.
 }
+\examples{
+r_credit_card_numbers(10)
+}
 

@@ -2,6 +2,8 @@
 #'
 #' @param n number of observations.
 #' @return A character vector of \code{n} fake randomly generated full names.
+#' @examples
+#' r_full_names(10)
 #' @export
 r_full_names <- function(n) {
   genders <- sample(c("male", "female"), size = n, replace = TRUE)

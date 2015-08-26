@@ -15,4 +15,7 @@ A character vector of \code{n} randomly generated IP address numbers.
 \description{
 Generate random fake IPv4 address numbers.
 }
+\examples{
+r_ipv4_addresses(10)
+}
 
