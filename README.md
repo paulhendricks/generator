@@ -4,7 +4,7 @@ generator
 
 [![Build Status](https://travis-ci.org/paulhendricks/generator.png?branch=master)](https://travis-ci.org/paulhendricks/generator) [![Build status](https://ci.appveyor.com/api/projects/status/c5vv1efvrsynt4js/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/generator/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/generator/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/generator?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/generator)](http://cran.r-project.org/package=generator) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-`generator` generates data containing fake Personally Identifiable Information (PII). Once complete, `generator` will be able to generate the following types of PII:
+`generator` generates data containing fake [Personally Identifiable Information](https://en.wikipedia.org/wiki/Personally_identifiable_information) (PII). Once complete, `generator` will be able to generate the following types of PII:
 
 -   Full name
 -   Home address
@@ -74,8 +74,8 @@ API
 ``` r
 library(generator)
 r_full_names(5)
-#> [1] "Elmo Oberbrunner" "Bernard Kozey"    "Vicky Quigley"   
-#> [4] "Duane Spencer"    "Edmond Pollich"
+#> [1] "Chrystal Gleason"   "Pearl Cremin"       "Chung Hane"        
+#> [4] "Forrest Ebert"      "Fernando Heathcote"
 ```
 
 ### Home address
@@ -88,15 +88,15 @@ r_full_names(5)
 
 ``` r
 r_email_addresses(5)
-#> [1] "zkawjsnxyl@oxdn.gvd" "ye@icegnwpjd.cit"    "mxcdyn@hvt.rnl"     
-#> [4] "c@h.gpm"             "nvfzibmqdj@z.vyi"
+#> [1] "lkec@gq.dhm"        "nhjt@angvoswil.bxd" "naiprtjk@n.tir"    
+#> [4] "hp@j.rdb"           "lhend@ehwuotl.nrk"
 ```
 
 ### National identification number
 
 ``` r
 r_national_identification_numbers(5)
-#> [1] "793-28-9611" "123-33-5174" "256-44-8311" "937-73-3726" "713-19-6715"
+#> [1] "900-84-5862" "380-36-4129" "390-96-3612" "228-40-2203" "789-17-6435"
 ```
 
 ### Passport number
@@ -109,8 +109,8 @@ r_national_identification_numbers(5)
 
 ``` r
 r_ipv4_addresses(5)
-#> [1] "177.39.163.254" "249.157.34.181" "41.72.235.155"  "230.97.151.209"
-#> [5] "11.243.19.74"
+#> [1] "90.31.149.30"   "92.215.31.216"  "24.186.88.127"  "226.107.98.248"
+#> [5] "21.76.207.233"
 ```
 
 ### Vehicle registration plate number
@@ -129,14 +129,15 @@ r_ipv4_addresses(5)
 
 ``` r
 r_credit_card_numbers(5)
-#> [1] "To be updated: depends on Card Type."
+#> [1] "9959-4935-9938-4695" "8599-4798-9182-6302" "7265-2839-9433-3615"
+#> [4] "8710-8418-9783-1792" "6857-9001-3390-8324"
 ```
 
 ### Date of birth
 
 ``` r
 r_date_of_births(5)
-#> [1] "1967-04-18" "1973-09-16" "1962-07-14" "1937-02-22" "1934-11-19"
+#> [1] "1914-08-15" "2012-10-16" "1983-05-18" "1924-06-24" "1999-07-01"
 ```
 
 ### Birth place
@@ -149,25 +150,25 @@ r_date_of_births(5)
 
 ``` r
 r_phone_numbers(5)
-#> [1] "2595175687" "4725672493" "4715147591" "8365812618" "3961589284"
+#> [1] "7192916249" "1721287238" "2759239573" "4657922947" "2357349125"
 r_phone_numbers(5, use_hyphens = TRUE)
-#> [1] "872-849-8794" "798-897-7623" "283-496-5361" "897-651-1897"
-#> [5] "918-534-2341"
+#> [1] "417-364-6298" "163-962-6349" "125-943-2387" "249-815-4837"
+#> [5] "416-859-1396"
 r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
-#> [1] "(862)-179-2835" "(625)-412-8493" "(541)-269-9823" "(851)-287-9384"
-#> [5] "(735)-749-1758"
+#> [1] "(534)-785-8157" "(357)-792-7158" "(439)-981-8295" "(719)-194-1783"
+#> [5] "(349)-754-3829"
 r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
-#> [1] "(829) 598 6158" "(452) 391 8417" "(548) 476 6513" "(461) 964 1749"
-#> [5] "(468) 947 1489"
+#> [1] "(893) 316 8657" "(596) 642 9763" "(987) 926 8265" "(916) 798 3751"
+#> [5] "(261) 159 9342"
 ```
 
 ### Latitude and longitude
 
 ``` r
 paste0(r_latitudes(5), ", ", r_longitudes(5))
-#> [1] "50.5428569717333, 27.972827218473"  
-#> [2] "-74.949232628569, 138.600759068504" 
-#> [3] "-8.98536507971585, 8.76628928817809"
-#> [4] "-55.297284303233, -79.1284860111773"
-#> [5] "66.6512586269528, 90.6234182976186"
+#> [1] "22.7399237221107, -25.0433440133929" 
+#> [2] "-63.9338305732235, -36.5782986301929"
+#> [3] "-1.24948028940707, 117.36587039195"  
+#> [4] "26.9005191978067, 64.42702322267"    
+#> [5] "40.2477177651599, -4.9627585709095"
 ```
