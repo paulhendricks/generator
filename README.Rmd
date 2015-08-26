@@ -49,7 +49,7 @@ knitr::opts_chunk$set(
 * Telephone number 
 * Latitude and longtiude 
 
-### Needs more features...
+### Needs more work...
 
 * National identification number
 * IP address 

@@ -31,7 +31,7 @@ State of the Union
 -   Telephone number
 -   Latitude and longtiude
 
-### Needs more features...
+### Needs more work...
 
 -   National identification number
 -   IP address
@@ -74,8 +74,8 @@ API
 ``` r
 library(generator)
 r_full_names(5)
-#> [1] "Christia Larson" "Chassidy Haley"  "Love Schinner"   "Paris Hermann"  
-#> [5] "Rosie Schiller"
+#> [1] "Elmo Oberbrunner" "Bernard Kozey"    "Vicky Quigley"   
+#> [4] "Duane Spencer"    "Edmond Pollich"
 ```
 
 ### Home address
@@ -88,15 +88,15 @@ r_full_names(5)
 
 ``` r
 r_email_addresses(5)
-#> [1] "wmypehd@psdwziyaq.qoz" "lvtmqyrgj@k.pfc"       "nbxaqlrjz@vj.ruo"     
-#> [4] "rxaqe@lsgoxbrw.ure"    "ofzhpxt@xgcwpr.qsm"
+#> [1] "zkawjsnxyl@oxdn.gvd" "ye@icegnwpjd.cit"    "mxcdyn@hvt.rnl"     
+#> [4] "c@h.gpm"             "nvfzibmqdj@z.vyi"
 ```
 
 ### National identification number
 
 ``` r
 r_national_identification_numbers(5)
-#> [1] "437-82-2194" "566-57-5148" "243-43-5969" "185-32-5554" "616-33-9371"
+#> [1] "793-28-9611" "123-33-5174" "256-44-8311" "937-73-3726" "713-19-6715"
 ```
 
 ### Passport number
@@ -109,8 +109,8 @@ r_national_identification_numbers(5)
 
 ``` r
 r_ipv4_addresses(5)
-#> [1] "3.2.194.121"     "164.237.151.205" "82.43.5.185"     "166.208.171.90" 
-#> [5] "112.124.219.17"
+#> [1] "177.39.163.254" "249.157.34.181" "41.72.235.155"  "230.97.151.209"
+#> [5] "11.243.19.74"
 ```
 
 ### Vehicle registration plate number
@@ -136,7 +136,7 @@ r_credit_card_numbers(5)
 
 ``` r
 r_date_of_births(5)
-#> [1] "1956-03-13" "1970-09-26" "1981-05-21" "2015-01-14" "1978-09-23"
+#> [1] "1967-04-18" "1973-09-16" "1962-07-14" "1937-02-22" "1934-11-19"
 ```
 
 ### Birth place
@@ -149,25 +149,25 @@ r_date_of_births(5)
 
 ``` r
 r_phone_numbers(5)
-#> [1] "9167533829" "4138627592" "9255988531" "5844355278" "3859275138"
+#> [1] "2595175687" "4725672493" "4715147591" "8365812618" "3961589284"
 r_phone_numbers(5, use_hyphens = TRUE)
-#> [1] "498-356-2759" "572-962-7194" "736-168-9368" "953-641-9281"
-#> [5] "365-675-8391"
+#> [1] "872-849-8794" "798-897-7623" "283-496-5361" "897-651-1897"
+#> [5] "918-534-2341"
 r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
-#> [1] "(478)-378-2165" "(789)-192-9537" "(875)-617-4782" "(693)-589-4765"
-#> [5] "(152)-978-7563"
+#> [1] "(862)-179-2835" "(625)-412-8493" "(541)-269-9823" "(851)-287-9384"
+#> [5] "(735)-749-1758"
 r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
-#> [1] "(213) 532 1579" "(578) 921 8254" "(951) 157 9485" "(975) 649 6214"
-#> [5] "(169) 467 9854"
+#> [1] "(829) 598 6158" "(452) 391 8417" "(548) 476 6513" "(461) 964 1749"
+#> [5] "(468) 947 1489"
 ```
 
 ### Latitude and longitude
 
 ``` r
 paste0(r_latitudes(5), ", ", r_longitudes(5))
-#> [1] "6.91457939799875, -35.3547493927181" 
-#> [2] "-63.6149163823575, -121.331203440204"
-#> [3] "-68.1189075764269, 96.7865376546979" 
-#> [4] "-7.81213211361319, -32.5723973382264"
-#> [5] "-61.6023271763697, 97.4625354632735"
+#> [1] "50.5428569717333, 27.972827218473"  
+#> [2] "-74.949232628569, 138.600759068504" 
+#> [3] "-8.98536507971585, 8.76628928817809"
+#> [4] "-55.297284303233, -79.1284860111773"
+#> [5] "66.6512586269528, 90.6234182976186"
 ```
