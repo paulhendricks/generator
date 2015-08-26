@@ -90,6 +90,7 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 
 ```{r}
 library(generator)
+set.seed(1)
 r_full_names(5)
 ```
 
