@@ -69,8 +69,7 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 API
 ---
 
-Generate data containing fake PII
----------------------------------
+### Generate data containing fake PII
 
 ``` r
 library(generator)
@@ -84,11 +83,11 @@ ashley_madison <-
 knitr::kable(ashley_madison, format = "markdown")
 ```
 
-| name           | email                      | phone\_number  |
-|:---------------|:---------------------------|:---------------|
-| Mirta Senger   | <ziqotbja@zilb.wul>        | (546)-218-2849 |
-| Casey Rath     | <wgb@tiohacnfsq.tea>       | (213)-459-4871 |
-| Ronny Schaden  | <rsacizdxl@mk.sut>         | (237)-815-1435 |
-| Jasmine Cole   | <m@mr.fac>                 | (395)-362-7632 |
-| Kip Schaden    | <nmzk@pmru.lbc>            | (734)-583-5178 |
-| Howard Kuhlman | <bnwujefkxm@rpkboadli.ezg> | (276)-275-1537 |
+| name             | email              | phone\_number  |
+|:-----------------|:-------------------|:---------------|
+| Evelyn Conn      | <bu@ekpy.pbv>      | (765)-189-1245 |
+| Kermit Dooley    | <qrof@ktcxig.poq>  | (863)-214-2859 |
+| Ressie Gerhold   | <hnslzfkpai@v.ekb> | (956)-238-3615 |
+| Beula Stiedemann | <ejlrfodt@dg.xaz>  | (792)-817-7318 |
+| David Leannon    | <ofjysmgc@tx.dbf>  | (754)-674-3726 |
+| Ellis Schoen     | <qrmnj@qb.hsm>     | (418)-514-9372 |
