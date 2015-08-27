@@ -69,107 +69,26 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 API
 ---
 
-### Full Name
+Generate data containing fake PII
+---------------------------------
 
 ``` r
 library(generator)
-set.seed(1)
-r_full_names(5)
-#> [1] "Ambrose Doyle"       "Eldridge Daniel"     "Gudrun Pfannerstill"
-#> [4] "Jennie Homenick"     "Augustine Runte"
+n <- 6
+ashley_madison <- 
+  data.frame(name = r_full_names(n), 
+             email = r_email_addresses(n), 
+             phone_number = r_phone_numbers(n, use_hyphens = TRUE, 
+                                            use_parentheses = TRUE), 
+             stringsAsFactors = FALSE)
+knitr::kable(ashley_madison, format = "markdown")
 ```
 
-### Home address
-
-``` r
-# To be added
-```
-
-### Email address
-
-``` r
-r_email_addresses(5)
-#> [1] "zjsve@qdgiawrx.mol" "rt@csjyoqlkv.alr"   "wkfbcgy@rkvgy.iqg" 
-#> [4] "cvith@ilvtzqwx.sjh" "sdfyxbmq@utk.kuo"
-```
-
-### National identification number
-
-``` r
-r_national_identification_numbers(5)
-#> [1] "689-29-9785" "417-21-7586" "343-53-4210" "993-93-4883" "670-63-2333"
-```
-
-### Passport number
-
-``` r
-# To be added
-```
-
-### IP address
-
-``` r
-r_ipv4_addresses(5)
-#> [1] "4.253.116.147"   "183.127.131.20"  "27.124.53.10"    "114.45.59.164"  
-#> [5] "164.193.152.237"
-```
-
-### Vehicle registration plate number
-
-``` r
-# To be added
-```
-
-### Driver's license number
-
-``` r
-# To be added
-```
-
-### Credit card number
-
-``` r
-r_credit_card_numbers(5)
-#> [1] "6382-7145-5073-6531" "6048-6413-2576-6014" "5734-3149-7720-3958"
-#> [4] "9865-3323-1944-5078" "5568-7563-8780-5503"
-```
-
-### Date of birth
-
-``` r
-r_date_of_births(5)
-#> [1] "1920-12-02" "1961-04-03" "1908-09-16" "1932-02-15" "1924-08-07"
-```
-
-### Birth place
-
-``` r
-# To be added
-```
-
-### Telephone number
-
-``` r
-r_phone_numbers(5)
-#> [1] "3848931368" "6794976958" "3275827694" "7419351735" "3243246285"
-r_phone_numbers(5, use_hyphens = TRUE)
-#> [1] "916-973-6873" "329-584-3196" "423-645-7543" "357-249-4296"
-#> [5] "784-641-3496"
-r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
-#> [1] "(532)-862-1752" "(193)-239-3245" "(157)-418-3218" "(327)-358-1986"
-#> [5] "(714)-547-2713"
-r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
-#> [1] "(296) 734 1374" "(638) 978 8725" "(938) 813 4256" "(924) 462 5239"
-#> [5] "(516) 482 8173"
-```
-
-### Latitude and longitude
-
-``` r
-paste0(r_latitudes(5), ", ", r_longitudes(5))
-#> [1] "-70.3618265781552, 121.223617102951"
-#> [2] "-30.009962785989, -154.384551364928"
-#> [3] "60.7349824625999, 73.0003476049751" 
-#> [4] "-40.1670284941792, 71.5768333990127"
-#> [5] "15.6663254555315, -12.9735428374261"
-```
+| name           | email                      | phone\_number  |
+|:---------------|:---------------------------|:---------------|
+| Mirta Senger   | <ziqotbja@zilb.wul>        | (546)-218-2849 |
+| Casey Rath     | <wgb@tiohacnfsq.tea>       | (213)-459-4871 |
+| Ronny Schaden  | <rsacizdxl@mk.sut>         | (237)-815-1435 |
+| Jasmine Cole   | <m@mr.fac>                 | (395)-362-7632 |
+| Kip Schaden    | <nmzk@pmru.lbc>            | (734)-583-5178 |
+| Howard Kuhlman | <bnwujefkxm@rpkboadli.ezg> | (276)-275-1537 |

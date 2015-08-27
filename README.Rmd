@@ -86,85 +86,16 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 
 ## API
 
-### Full Name
+## Generate data containing fake PII
 
 ```{r}
 library(generator)
-set.seed(1)
-r_full_names(5)
-```
-
-### Home address
-
-```{r}
-# To be added
-```
-
-### Email address
-
-```{r}
-r_email_addresses(5)
-```
-
-### National identification number
-
-```{r}
-r_national_identification_numbers(5)
-```
-
-### Passport number
-
-```{r}
-# To be added
-```
-
-### IP address
-
-```{r}
-r_ipv4_addresses(5)
-```
-
-### Vehicle registration plate number
-
-```{r}
-# To be added
-```
-
-### Driver's license number
-
-```{r}
-# To be added
-```
-
-### Credit card number
-
-```{r}
-r_credit_card_numbers(5)
-```
-
-### Date of birth
-
-```{r}
-r_date_of_births(5)
-```
-
-### Birth place
-
-```{r}
-# To be added
-```
-
-### Telephone number
-
-```{r}
-r_phone_numbers(5)
-r_phone_numbers(5, use_hyphens = TRUE)
-r_phone_numbers(5, use_hyphens = TRUE, use_parentheses = TRUE)
-r_phone_numbers(5, use_spaces = TRUE, use_parentheses = TRUE)
-```
-
-### Latitude and longitude
-
-```{r}
-paste0(r_latitudes(5), ", ", r_longitudes(5))
+n <- 6
+ashley_madison <- 
+  data.frame(name = r_full_names(n), 
+             email = r_email_addresses(n), 
+             phone_number = r_phone_numbers(n, use_hyphens = TRUE, 
+                                            use_parentheses = TRUE), 
+             stringsAsFactors = FALSE)
+knitr::kable(ashley_madison, format = "markdown")
 ```
