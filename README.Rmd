@@ -97,7 +97,7 @@ ashley_madison <-
              dob = r_date_of_births(n), 
              email = r_email_addresses(n), 
              ip = r_ipv4_addresses(n), 
-             phone = r_phone_numbers(n, use_spaces = TRUE), 
+             phone = r_phone_numbers(n), 
              credit_card = r_credit_card_numbers(n), 
              lat = r_latitudes(n), 
              lon = r_longitudes(n), 
