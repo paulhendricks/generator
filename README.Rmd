@@ -91,6 +91,7 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 ```{r}
 library(generator)
 n <- 6
+set.seed(1)
 ashley_madison <- 
   data.frame(name = r_full_names(n), 
              snn = r_national_identification_numbers(n), 
