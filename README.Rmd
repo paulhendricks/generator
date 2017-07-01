@@ -1,7 +1,6 @@
 ---
 output:
-  md_document:
-    variant: markdown_github
+  github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -16,11 +15,11 @@ knitr::opts_chunk$set(
 
 # generator
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/generator)](http://cran.r-project.org/package=generator)
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator)
 [![Build Status](https://travis-ci.org/paulhendricks/generator.png?branch=master)](https://travis-ci.org/paulhendricks/generator)
 [![Build status](https://ci.appveyor.com/api/projects/status/c5vv1efvrsynt4js/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/generator/branch/master)
 [![codecov.io](http://codecov.io/github/paulhendricks/generator/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/generator?branch=master)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/generator)](http://cran.r-project.org/package=generator)
-[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/generator)](http://cran.rstudio.com/package=generator)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 `generator` generates data containing fake [Personally Identifiable Information](https://en.wikipedia.org/wiki/Personally_identifiable_information) (PII). Once complete, `generator` will be able to generate the following types of PII:
@@ -65,24 +64,22 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-You can install:
+You can install the latest development version from CRAN:
 
-* the latest released version from CRAN with
+```R
+install.packages("generator")
+````
 
-    ```R
-    install.packages("generator")
-    ````
+Or from GitHub with:
 
-* the latest development version from github with
+```R
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("paulhendricks/generator")
+```
 
-    ```R
-    if (packageVersion("devtools") < 1.6) {
-      install.packages("devtools")
-    }
-    devtools::install_github("paulhendricks/generator")
-    ```
-
-If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/generator/issues).
+If you encounter a clear bug, please file a [minimal reproducible example](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example) on [GitHub](https://github.com/paulhendricks/generator/issues).
 
 ## API
 
@@ -106,8 +103,23 @@ ashley_madison <-
 knitr::kable(ashley_madison, format = "markdown")
 ```
 
-## Author
+## Citation
 
-The original author of `generator` is [Paul Hendricks](https://github.com/paulhendricks).
+To cite package ‘generator’ in publications use:
 
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/paulhendricks/)
+```
+Paul Hendricks (2015). generator: Generate Data Containing Fake Personally Identifiable Information. R package version 0.1.0. https://CRAN.R-project.org/package=generator
+```
+
+A BibTeX entry for LaTeX users is
+
+```
+@Manual{,
+  title = {generator: Generate Data Containing Fake Personally Identifiable
+Information},
+  author = {Paul Hendricks},
+  year = {2015},
+  note = {R package version 0.1.0},
+  url = {https://CRAN.R-project.org/package=generator},
+}
+```
